@@ -1,0 +1,78 @@
+.profile-page .photo-container {
+    width: 150px;
+    height: 150px;
+}
+
+.progress-container .progress {
+    height: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
+}
+
+.progress-container .progress-value {
+    font-weight: bold;
+}
+
+.progress-container.progress-orchid .progress {
+    background: rgb(222, 164, 252)
+}
+
+.progress-container.progress-orchid .progress-bar {
+    background: darkorchid;
+}
+
+.progress-container.progress-orchid .progress-badge,
+.progress-container.progress-orchid .progress-value {
+    color: darkorchid;
+}
+
+.progress-container.progress-pinka .progress {
+    background: rgb(243, 154, 183);
+}
+
+.progress-container.progress-pinka .progress-bar {
+    background: rgb(216, 56, 109);
+}
+
+.progress-container.progress-pinka .progress-badge,
+.progress-container.progress-pinka .progress-value {
+    color: rgb(216, 56, 109);
+}
+
+.skill-cover {
+    display: block;
+    margin: 45%;
+    margin-top: -35px;
+    text-align: center;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    padding: 0;
+    max-width: 80px;
+    min-width: auto;
+    margin-bottom: 4px;
+    color: #FFFFFF;
+    background-color: #f96332;
+    box-shadow: 0px 5px 35px 0px rgba(0, 0, 0, 0.3);
+}
+
+.skill-arrow {
+    /* display: block; */
+    align-self: middle;
+    line-height: 80px;
+    font-size: 24px;
+}
+
+.skill-header {
+    /* display: inline-flex; */
+    /* text-align: bottom; */
+    /* width: 100%; */
+    /* background-color: #d8d6d5; */
+    /* box-shadow: 0px 5px 9px 0px rgba(59, 58, 58, 0.3); */
+}
+
+.skill-header h3 {
+    /* margin: 10px; */
+    /* margin-left: 40%; */
+}
