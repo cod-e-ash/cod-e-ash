@@ -1,28 +1,18 @@
 {% extends '_base.html' %}
-
+{% load static %}
 {% block content %}
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent" color-on-scroll="450">
+<nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent" id="mynavbar" color-on-scroll="500">
   <div class="container">
     <div class="dropdown button-dropdown">
-      <a href="#pablo" class="dropdown-toggle" id="navbarDropdown">
+      <div>
         <span class="button-bar"></span>
         <span class="button-bar"></span>
         <span class="button-bar"></span>
-      </a>
-      <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-header">Dropdown header</a>
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Separated link</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">One more separated link</a>
-      </div> -->
+      </div>
     </div>
     <div class="navbar-translate">
-      <a class="" href="#" rel="tooltip" title="Profile Page developed by Ashish" data-placement="bottom" target="_self">
+      <a class="" href="#" rel="tooltip" title="developed by Ashish" data-placement="bottom" target="_self">
         Cod-e-asH
       </a>
       <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
@@ -35,20 +25,16 @@
     <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="static/img/blurred-image-1.jpg">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#">Resume</a>
+          <a class="nav-link" href="#about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Projects</a>
+          <a class="nav-link" href="#projects">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact Me</a>
+          <a class="nav-link" href="#contact">Contact Me</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" rel="tooltip" title="Follow me on Twitter" data-placement="bottom" href="https://twitter.com/mannkibaat"
-            target="_blank">
-            <i class="fab fa-twitter"></i>
-            <p class="d-lg-none d-xl-none">Twitter</p>
-          </a>
+          <a class="nav-link" href="{% static '/files/Ashish.Bagaddeo.Profile.doc' %}">Resume</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" rel="tooltip" title="Like me on Facebook" data-placement="bottom" href="https://www.facebook.com/crashish"
@@ -59,8 +45,8 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" rel="tooltip" title="Follow me on Instagram" data-placement="bottom" href="#" target="_blank">
-            <i class="fab fa-instagram"></i>
-            <p class="d-lg-none d-xl-none">Instagram</p>
+            <i class="fab fa-github"></i>
+            <p class="d-lg-none d-xl-none">Github</p>
           </a>
         </li>
       </ul>
@@ -77,51 +63,56 @@
         <img src="static/img/ashish_profile.jpg" alt="">
       </div>
       <h3 class="title">Ashish Bagaddeo</h3>
-      <p class="category"> Developer ~ Code ~ Photography</p>
+      <p class="category font-weight-normal"> Eat ~ Code ~ Party ~ Sleep </p>
       <div class="content">
         <div class="social-description">
-          <h2>26</h2>
-          <p>Comments</p>
+          <h2>9 years</h2>
+          <p>Experience</p>
         </div>
         <div class="social-description">
-          <h2>26</h2>
-          <p>Comments</p>
+          <h2>32</h2>
+          <p>Age</p>
         </div>
         <div class="social-description">
-          <h2>48</h2>
-          <p>Bookmarks</p>
+          <h2>London</h2>
+          <p>Location</p>
         </div>
       </div>
     </div>
   </div>
-  <div class="section">
+  <div class="section" data-spy="scroll" data-target="#mynavbar" data-offset="0">
     <div class="container">
       <div class="button-container">
-          <a href="#button" class="btn btn-primary btn-round btn-lg btn-icon" rel="tooltip" title="Check put my profile on LinkedIn">
-              <i class="fab fa-linkedin"></i>
-            </a>
+        <a href="#button" class="btn btn-primary btn-round btn-lg btn-icon" rel="tooltip" title="Check put my profile on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
         <a href="#button" class="btn btn-info btn-round btn-lg btn-icon" rel="tooltip" title="Follow me on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
-        <a href="#button" class="btn btn-danger btn-round btn-lg btn-icon" rel="tooltip" title="Follow me on Instagram">
-          <i class="fab fa-instagram"></i>
+        <a href="#button" class="btn btn-danger btn-round btn-lg btn-icon" rel="tooltip" title="Checkout my Github repo">
+          <i class="fab fa-github"></i>
         </a>
       </div>
-      <h3 class="title">About me</h3>
-      <h5 class="description">An artist of considerable range, Ryan — the name taken by Melbourne-raised,
-        Brooklyn-based Nick Murphy — writes, performs and records all of his own music, giving it a warm, intimate feel
-        with a solid groove structure. An artist of considerable range.</h5>
-
-      <div class="title skill-header shadow p-2 mt-2 mb-2 bg-light rounded">
-        <h3 class="h3 font-weight-bold text-secondary mt-1">Tech Stack</h3>
+      <div class="container p-5 mt-5" id="about">
+        <h3 class="title" id="about"><i class="now-ui-icons business_badge"></i> About me</h3>
+        <h5 class="description text-dark">I am Ashish Bagaddeo. With over 9 years of experience in developing and
+          maintiaining large scale softwares, this is my first foray into web development. I am a self-taught backend
+          developer with focus on Node.js and
+          Django. Currently residing in London, i like to travel and in love with nature. With that, I pursue my other
+          passion
+          i.e. Photography.</h5>
       </div>
-      <div class="skill-cover mt-0.5">
-          <a class="skill-arrow">
-            <i class="fa fa-link"></i>
-          </a>
+      <div class="container shadow bg-light rounded">
+        <div class="title skill-header bg-light">
+          <h3 class="h3 font-weight-bold">
+            <a class="skill-arrow">
+              <i class="fa fa-link"></i>
+            </a>
+            <span>Tech Stack</span>
+          </h3>
+          <hr class="shadow bg-white rounded">
         </div>
-      <div class="container shadow p-4 mb-5 bg-light rounded">
-        <div class="row justify-content-end border-bottom border-secondary">
+        <div class="row justify-content-end border-bottom">
           <div class="col-md-6 mb-5">
             <h4>Web Technologies</h4>
             <div class="progress-container progress-success">
@@ -181,7 +172,7 @@
             <i class="fa fa-location-arrow"></i>
           </a>
         </div>
-        <div class="row mb-3 justify-content-left">
+        <div class="row mb-5 justify-content-left">
           <div class="col-md-6">
             <h4>iSeries</h4>
             <div class="progress-container progress-success">
@@ -204,7 +195,7 @@
               </div>
             </div>
             <br>
-            <div class="progress-container progress-danger">
+            <div class="progress-container progress-danger mb-5">
               <span class="progress-badge">SQL (DB2)</span>
               <div class="progress">
                 <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0"
@@ -217,8 +208,8 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-6 ml-auto mr-auto">
+      <div class="row p-5" id="projects">
+        <div class="col-md-6 ml-auto mr-auto" id="projects">
           <h4 class="title text-center">My Portfolio</h4>
           <div class="nav-align-center">
             <ul class="nav nav-pills nav-pills-primary nav-pills-just-icons" role="tablist">
@@ -229,7 +220,7 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link active" data-toggle="tab" href="#home" role="tablist">
-                  <i class="now-ui-icons location_world"></i>
+                  <i class="now-ui-icons business_briefcase-24"></i>
                 </a>
               </li>
               <li class="nav-item">
@@ -260,7 +251,10 @@
             <div class="col-md-10 ml-auto mr-auto">
               <div class="row collections">
                 <div class="col-md-6">
-                  <img src="static/img/bg7.jpg" alt="" class="img-raised">
+                  <div class="card">
+                    <div class="card-header">Test</div>
+                    <div class="card-body">Note in test</div>
+                  </div>
                   <img src="static/img/bg2.jpg" alt="" class="img-raised">
                 </div>
                 <div class="col-md-6">
@@ -290,56 +284,84 @@
   </div>
   <div class="container shadow p-3 mb-5 bg-white rounded">
     <div class="row justify-content-center mb-4">
-      <h3 class="font-weight-bold text-dark">Work Ex</h3>
+      <h3 class="h3 font-weight-bold">
+        <a class="skill-arrow">
+          <i class="fa fa-briefcase"></i>
+        </a>
+        <span>Work Ex</span>
+      </h3>
+      <!-- <h3 class="title" id="about"><span><i class="now-ui-icons clothes_tie-bow text-align-baseline"></i></span> Work Ex</h3> -->
     </div>
     <div class="row">
       <div class="col-md-12">
         <div class="main-timeline8">
           <div class="timeline">
             <span class="timeline-icon"></span>
-            <span class="year">2017</span>
+            <span class="year">2017-18</span>
             <div class="timeline-content">
-              <h3 class="title">Web Desginer</h3>
-              <p class="description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis justo id pulvinar suscipit.
-                Pellentesque rutrum vehicula erat sed dictum. Integer quis turpis magna. Suspendisse tincidunt elit at
-                erat tincidunt, vel vulputate arcu dapibus. Etiam accumsan ornare posuere. Nullam est.
+              <h6>
+                <span class="badge badge-success">RPGLE</span>
+                <span class="badge badge-info">CLLE</span>
+                <span class="badge badge-danger">SQL (DB2)</span>
+                <span class="badge badge-orchid">SHELL</span>
+              </h6>
+              <h3 class="title">Senior Developer at Citi</h3>
+              <p class="description font-weight-normal">
+                In March 2017, a day after my birthday, joined this wonderful organization and team. Got the time to
+                study <b>Derivative Market</b>, and the product which I was developing for 3 years, from a client
+                perspective. Worked on
+                many
+                projects, as part of maintainance or regulatory requirement or analysis of day-to-day business.
               </p>
             </div>
           </div>
           <div class="timeline">
             <span class="timeline-icon"></span>
-            <span class="year">2016</span>
+            <span class="year">2014-17</span>
             <div class="timeline-content">
-              <h3 class="title">Web Developer</h3>
-              <p class="description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis justo id pulvinar suscipit.
-                Pellentesque rutrum vehicula erat sed dictum. Integer quis turpis magna. Suspendisse tincidunt elit at
-                erat tincidunt, vel vulputate arcu dapibus. Etiam accumsan ornare posuere. Nullam est.
+              <h6>
+                <span class="badge badge-success">RPGLE</span>
+                <span class="badge badge-info">CLLE</span>
+                <span class="badge badge-danger">SQL (DB2)</span>
+                <span class="badge badge-orchid">SHELL</span>
+                <span class="badge badge-pinka">VBA</span>
+              </h6>
+              <h3 class="title">Senior Developer at FIS</h3>
+              <p class="description font-weight-normal">
+                For more than 3 and half years, I, with many my team developed, maintained and enhanced the most used
+                backend derivative product by evey major company in the world. Sometime it was a regulatory
+                requirement, a new feature requested by client or need of the hour.
               </p>
             </div>
           </div>
           <div class="timeline">
             <span class="timeline-icon"></span>
-            <span class="year">2015</span>
+            <span class="year">2008-14</span>
             <div class="timeline-content">
-              <h3 class="title">Web Desginer</h3>
-              <p class="description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis justo id pulvinar suscipit.
-                Pellentesque rutrum vehicula erat sed dictum. Integer quis turpis magna. Suspendisse tincidunt elit at
-                erat tincidunt, vel vulputate arcu dapibus. Etiam accumsan ornare posuere. Nullam est.
+              <h6>
+                <span class="badge badge-success">RPGLE</span>
+                <span class="badge badge-info">CLLE</span>
+                <span class="badge badge-danger">SQL (DB2)</span>
+                <span class="badge badge-orchid">SHELL</span>
+                <span class="badge badge-pinka">VBA</span>
+              </h6>
+              <h3 class="title">Career start at Wipro</h3>
+              <p class="description font-weight-normal">
+                This is where it began. Just out of the college, recession was having its effect on the job market.
+                After three rounds of interview, and lots of fever, was selected in this mammoth company. After 6 weeks
+                of training, was assigned my first cient <b>JP Morgan</b>. During my 5 and half years, I built my base
+                as a
+                developer and found it to be my passion as well. Skills developed here are core to my foundation.
               </p>
             </div>
           </div>
           <div class="timeline">
             <span class="timeline-icon"></span>
-            <span class="year">2014</span>
+            <span class="year">2002</span>
             <div class="timeline-content">
-              <h3 class="title">Web Developer</h3>
-              <p class="description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis justo id pulvinar suscipit.
-                Pellentesque rutrum vehicula erat sed dictum. Integer quis turpis magna. Suspendisse tincidunt elit at
-                erat tincidunt, vel vulputate arcu dapibus. Etiam accumsan ornare posuere. Nullam est.
+              <h3 class="title">First Job to in Cyber Cafe</h3>
+              <p class="description font-weight-normal">
+                My first high school job (just for curosity) to maintain cyber cafe computers.
               </p>
             </div>
           </div>
@@ -348,6 +370,46 @@
     </div>
   </div>
   <hr>
+  <div class="section section-contact-us text-center">
+    <div class="container" id="contact">
+      <h2 class="title">Contact Me?</h2>
+      <p class="description">Enter the details below and I will get back to you.</p>
+      <div class="row">
+        <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
+          <div class="input-group input-lg">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="now-ui-icons users_circle-08"></i>
+              </span>
+            </div>
+            <input type="text" class="form-control" placeholder="Name...">
+          </div>
+          <div class="input-group input-lg">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="now-ui-icons ui-1_email-85"></i>
+              </span>
+            </div>
+            <input type="text" class="form-control" placeholder="Email...">
+          </div>
+          <div class="input-group input-lg">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fa fa-phone"></i>
+              </span>
+            </div>
+            <input type="text" class="form-control" placeholder="Phone no...">
+          </div>
+          <div class="textarea-container">
+            <textarea class="form-control" name="name" rows="4" cols="80" placeholder="Type a message..."></textarea>
+          </div>
+          <div class="send-button">
+            <a href="#pablo" class="btn btn-primary btn-round btn-block btn-lg">Send Message</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <footer class="footer footer-default">
     <div class="container">
       <nav>
@@ -358,7 +420,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#contact">
               Contact Me
             </a>
           </li>
@@ -368,9 +430,9 @@
         &copy;
         <script>
           document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
-        </script>, Designed by
-        <a href="https://www.creative-tim.com" target="_blank"></a>Creative Tim</a>. Developed by
-        <a href="#" target="_blank">Ashish Bagaddeo</a>.
+        </script>, Components by
+        <a href="https://www.creative-tim.com" target="_blank"></a>Creative Tim</a>. Designed & Developed by
+        <a href="#">Ashish Bagaddeo</a>.
       </div>
     </div>
   </footer>

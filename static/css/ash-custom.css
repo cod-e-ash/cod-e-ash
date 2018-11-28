@@ -1,7 +1,15 @@
-.navbar-fixed.scrolled {
-    background-color: #f96332 !important;
-    transition: background-color 400ms linear;
-  }
+.profile-page .photo-container {
+    width: 150px;
+    height: 150px;
+}
+
+.profile-page .title {
+    margin-top: 0px;
+}
+
+.main-timeline8 .title {
+    margin-top: 0px;
+}
 
 .progress-container .progress {
     height: 10px;
@@ -39,8 +47,6 @@
 .progress-container.progress-pinka .progress-value {
     color: rgb(216, 56, 109);
 }
-
-
 
 .skill-cover {
     display: block;
