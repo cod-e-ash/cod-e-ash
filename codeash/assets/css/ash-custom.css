@@ -160,7 +160,7 @@ textarea:focus {
     -moz-transition: -moz-transform .15s linear;
     -o-transition: -o-transform .15s linear;
     -webkit-transition: -webkit-transform .15s linear;
-    transition: .15s linear
+    transition: .15s linear;
 }
 
 .card1 {
@@ -169,6 +169,7 @@ textarea:focus {
     -moz-transform: rotate(-6deg);
     transform: rotate(-6deg);
     margin-left: 20px;
+    background-color: rgb(255, 255, 155);
 }
 
 .card2 {
@@ -178,6 +179,7 @@ textarea:focus {
     transform: rotate(4deg);
     position: relative;
     top: 5px;
+    background-color: rgb(253, 215, 156);
 }
 
 .card3 {
@@ -187,6 +189,7 @@ textarea:focus {
     transform: rotate(-3deg);
     position: relative;
     top: -5px;
+    background-color: rgb(153, 255, 187);
 }
 
 .card4 {
@@ -196,6 +199,7 @@ textarea:focus {
     transform: rotate(5deg);
     position: relative;
     top: -10px;
+    background-color: rgb(154, 214, 253);
 }
 
 .edu .card:hover,
@@ -209,7 +213,6 @@ textarea:focus {
 
     z-index: 1;
     margin-top: 20px;
-    ba
 }
 
 .after-edu {
