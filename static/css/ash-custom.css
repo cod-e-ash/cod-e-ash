@@ -1,14 +1,39 @@
+
+.transparent {
+    background: transparent !important;
+}
+
+.profile-page .page-header {
+    min-height: 650px;
+}
+
 .profile-page .photo-container {
     width: 150px;
     height: 150px;
 }
 
 .profile-page .title {
-    margin-top: 0px;
+    margin-top: -5px;
 }
 
-.main-timeline8 .title {
-    margin-top: 0px;
+.badge-orchid {
+    border-color: darkorchid;
+    background-color: darkorchid;
+    color: #fff;
+}
+
+.badge-pinka {
+    border-color: rgb(216, 56, 109);
+    background-color: rgb(216, 56, 109);
+    color: #fff;
+}
+
+.main-timeline8 .timeline:nth-child(2n) .year {
+    background: #64e28a;
+}
+
+.main-timeline8 .timeline:nth-child(4n) .year {
+    background: #fd7486
 }
 
 .progress-container .progress {
@@ -70,17 +95,4 @@
     align-self: middle;
     line-height: 80px;
     font-size: 24px;
-}
-
-.skill-header {
-    /* display: inline-flex; */
-    /* text-align: bottom; */
-    /* width: 100%; */
-    /* background-color: #d8d6d5; */
-    /* box-shadow: 0px 5px 9px 0px rgba(59, 58, 58, 0.3); */
-}
-
-.skill-header h3 {
-    /* margin: 10px; */
-    /* margin-left: 40%; */
 }

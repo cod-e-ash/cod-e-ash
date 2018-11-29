@@ -1,3 +1,35 @@
+body {
+    min-width: 480px;
+}
+.input-group .form-control {
+    background: transparent;
+    /* background-color: rgba(255, 255, 255, 0.527) !important; */
+    font-size: 15px;
+}
+
+.input-group .input-group-text {
+    background: transparent;
+    /* background-color: rgba(255, 255, 255, 0.527) !important; */
+}
+
+.input-group-focus {
+    /* background: transparent; */
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    color: rgb(50, 92, 168);
+    font-weight: bolder;
+}
+
+textarea .form-control {
+    background: transparent;
+}
+
+textarea:focus {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    color: rgb(182, 141, 141);
+}
+
 
 .profile-page .page-header {
     min-height: 650px;

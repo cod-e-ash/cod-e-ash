@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent" id="mynavbar" color-on-scroll="500">
+<nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent" id="mynavbar" color-on-scroll="600">
   <div class="container">
     <div class="dropdown button-dropdown">
       <div>
@@ -44,7 +44,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" rel="tooltip" title="Follow me on Instagram" data-placement="bottom" href="#" target="_blank">
+          <a class="nav-link" rel="tooltip" title="Check out Github repo" data-placement="bottom" href="https://github.com/cod-e-ash" target="_blank">
             <i class="fab fa-github"></i>
             <p class="d-lg-none d-xl-none">Github</p>
           </a>
@@ -63,8 +63,8 @@
         <img src="static/img/ashish_profile.jpg" alt="">
       </div>
       <h3 class="title">Ashish Bagaddeo</h3>
-      <p class="category font-weight-normal"> Eat ~ Code ~ Party ~ Sleep </p>
-      <div class="content">
+      <p class="category font-weight-normal mb-2"> Eat ~ Code ~ Party ~ Sleep </p>
+      <div class="content mt-5">
         <div class="social-description">
           <h2>9 years</h2>
           <p>Experience</p>
@@ -82,29 +82,42 @@
   </div>
   <div class="section" data-spy="scroll" data-target="#mynavbar" data-offset="0">
     <div class="container">
-      <div class="button-container">
-        <a href="#button" class="btn btn-primary btn-round btn-lg btn-icon" rel="tooltip" title="Check put my profile on LinkedIn">
+      <div class="button-container mb-2">
+        <a href="https://www.linkedin.com/in/ashish-bagaddeo-48425278/" class="btn btn-primary btn-round btn-lg btn-icon" rel="tooltip" title="Check put my profile on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
-        <a href="#button" class="btn btn-info btn-round btn-lg btn-icon" rel="tooltip" title="Follow me on Twitter">
-          <i class="fab fa-twitter"></i>
+        <a href="https://facebook.com/crashish" class="btn btn-info btn-round btn-lg btn-icon" rel="tooltip" title="Like me on Facebook">
+          <i class="fab fa-facebook"></i>
         </a>
-        <a href="#button" class="btn btn-danger btn-round btn-lg btn-icon" rel="tooltip" title="Checkout my Github repo">
+        <a href="https://github.com/cod-e-ash" class="btn btn-danger btn-round btn-lg btn-icon" rel="tooltip" title="Checkout my Github repo">
           <i class="fab fa-github"></i>
         </a>
       </div>
-      <div class="container p-5 mt-5" id="about">
-        <h3 class="title" id="about"><i class="now-ui-icons business_badge"></i> About me</h3>
+      <div class="p-1" id="about"></div>
+      <div class="container p-5 mt-5">
+        <h3 class="title"><i class="now-ui-icons business_badge"></i> About me</h3>
         <h5 class="description text-dark">I am Ashish Bagaddeo. With over 9 years of experience in developing and
           maintiaining large scale softwares, this is my first foray into web development. I am a self-taught backend
           developer with focus on Node.js and
           Django. Currently residing in London, i like to travel and in love with nature. With that, I pursue my other
           passion
           i.e. Photography.</h5>
+          <div class="tab-pane" id="messages" role="tabpanel">
+              <div class="col-md-10 ml-auto mr-auto">
+                <div class="row collections">
+                  <div class="col-md-6">
+                    <img src="static/img/ashish_2.jpg" alt="" class="img-raised">
+                  </div>
+                  <div class="col-md-6">
+                    <img src="static/img/ashish_1.jpg" alt="" class="img-raised">
+                  </div>
+                </div>
+              </div>
+            </div>
       </div>
       <div class="container shadow bg-light rounded">
         <div class="title skill-header bg-light">
-          <h3 class="h3 font-weight-bold">
+          <h3 class="h3 font-weight-bold" style="margin: -12px">
             <a class="skill-arrow">
               <i class="fa fa-link"></i>
             </a>
@@ -359,9 +372,9 @@
             <span class="timeline-icon"></span>
             <span class="year">2002</span>
             <div class="timeline-content">
-              <h3 class="title">First Job to in Cyber Cafe</h3>
+              <h3 class="title">First Job in Internet Cafe</h3>
               <p class="description font-weight-normal">
-                My first high school job (just for curosity) to maintain cyber cafe computers.
+                My first high school job (just for curosity) to maintain internet cafe computers.
               </p>
             </div>
           </div>
@@ -369,12 +382,18 @@
       </div>
     </div>
   </div>
-  <hr>
-  <div class="section section-contact-us text-center">
+  <div class="section section-signup" style="background-image: url('static/img/bg10.jpg'); background-size: cover; background-position: top center; min-height: 780px;">
+    <!-- <div class="section section-contact-us text-center"> -->
     <div class="container" id="contact">
       <h2 class="title">Contact Me?</h2>
-      <p class="description">Enter the details below and I will get back to you.</p>
+      <p class="description font-weight-normal">Enter the details below and I will get back to you.</p>
       <div class="row">
+        <div class="col-lg-4 text-center p-2 ml-auto mr-auto mt-1">
+          <span>reach me at </span><h5 class="h5 text-lowercase font-weight-bold">ashish@bagaddeo.com</h5>
+        </div>
+        <div class="d-lg-none d-xl-none col-12 text-center p-2 mb-3 ml-auto mr-auto mt-1">
+            <h6 class="h6">OR </h6>
+          </div>
         <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
           <div class="input-group input-lg">
             <div class="input-group-prepend">
@@ -386,7 +405,7 @@
           </div>
           <div class="input-group input-lg">
             <div class="input-group-prepend">
-              <span class="input-group-text">
+              <span class="input-group-text transparent">
                 <i class="now-ui-icons ui-1_email-85"></i>
               </span>
             </div>
@@ -401,7 +420,7 @@
             <input type="text" class="form-control" placeholder="Phone no...">
           </div>
           <div class="textarea-container">
-            <textarea class="form-control" name="name" rows="4" cols="80" placeholder="Type a message..."></textarea>
+            <textarea class="form-control p-2" name="name" rows="4" cols="80" placeholder="Type a message..."></textarea>
           </div>
           <div class="send-button">
             <a href="#pablo" class="btn btn-primary btn-round btn-block btn-lg">Send Message</a>
@@ -415,13 +434,13 @@
       <nav>
         <ul>
           <li>
-            <a href="#">
+            <a href="{% static '/files/Ashish.Bagaddeo.Profile.doc' %}">
               Resume
             </a>
           </li>
           <li>
-            <a href="#contact">
-              Contact Me
+            <a class="text-lowercase" href="mailto: ashish@bagaddeo.com">
+              ashish@bagaddeo.com
             </a>
           </li>
         </ul>
@@ -431,8 +450,8 @@
         <script>
           document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
         </script>, Components by
-        <a href="https://www.creative-tim.com" target="_blank"></a>Creative Tim</a>. Designed & Developed by
-        <a href="#">Ashish Bagaddeo</a>.
+        <a href="https://www.creative-tim.com" target="_blank"></a>Creative Tim</a>. | Designed & Developed by
+        <a href="mailto: ashish@bagaddeo.com">Ashish Bagaddeo</a>.
       </div>
     </div>
   </footer>
