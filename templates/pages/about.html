@@ -2,17 +2,111 @@
 
 
 {% block content %}
-<div class="container p-4 mb-5 bg-light rounded">
-    <div class="title skill-header p-2 mt-2 mb-2 bg-light rounded">
-        <h3 class="h3 font-weight-bold text-secondary mt-3">Tech Stack</h3>
+<style type="text/css">
+    .edu .row {
+        overflow: hidden;
+        padding: 2em;
+    }
+
+    .edu .card {
+        text-decoration: none;
+        place-content: center;
+        padding: 1em;
+        -moz-transition: -moz-transform .15s linear;
+        -o-transition: -o-transform .15s linear;
+        -webkit-transition: -webkit-transform .15s linear;
+        transition: .15s linear
+    }
+
+    .card1 {
+        -webkit-transform: rotate(-6deg);
+        -o-transform: rotate(-6deg);
+        -moz-transform: rotate(-6deg);
+        transform: rotate(-6deg);
+        position: relative;
+    }
+
+    .card2 {
+        -o-transform: rotate(4deg);
+        -webkit-transform: rotate(4deg);
+        -moz-transform: rotate(4deg);
+        transform: rotate(4deg);
+        position: relative;
+        top: 5px;
+    }
+
+    .card3 {
+        -o-transform: rotate(-3deg);
+        -webkit-transform: rotate(-3deg);
+        -moz-transform: rotate(-3deg);
+        transform: rotate(-3deg);
+        position: relative;
+        top: -5px;
+    }
+
+    .card4 {
+        -o-transform: rotate(5deg);
+        -webkit-transform: rotate(5deg);
+        -moz-transform: rotate(5deg);
+        transform: rotate(5deg);
+        position: relative;
+        top: -10px;
+    }
+    
+    .edu .card1:hover,
+    .edu .card1:focus {
+        -webkit-transform: scale(1.25);
+        -moz-transform: scale(1.25);
+        -o-transform: scale(1.25);
+        transform: scale(1.25);
+        position: relative;
+        z-index: 5;
+    }
+
+
+</style>
+
+<div class="p-1" id="education"></div>
+<div class="container edu mt-2">
+    <h3 class="title"><i class="now-ui-icons education_hat"></i> Academy </h3>
+    <div class="row">
+        <div class="card card1 border-light style="max-width: 20rem;">
+            <div class="card-header p-2">Header</div>
+            <div class="card-body">
+                <h5 class="card-title">Light card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+            </div>
+        </div>
+        <div class="card card2 border-light" style="max-width: 18rem;">
+            <div class="card-header p-2">Header</div>
+            <div class="card-body">
+                <h5 class="card-title">Light card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+            </div>
+        </div>
     </div>
-    <div class="skill-cover mt-0.5">
-        <a class="skill-arrow">
-            <i class="fa fa-link"></i>
-        </a>
-    </div>
-    <div class="row justify-content-end border-bottom border-secondary">
-        <div class="col-md-6 mb-5">
+    <div class="row mb-2">
+        <div class="card card4 border-light" style="max-width: 18rem;">
+            <div class="card-header p-2">Header</div>
+            <div class="card-body">
+                <h5 class="card-title">Light card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+            </div>
+        </div>
+        <div class="card card3 border-light" style="max-width: 22rem;">
+            <div class="card-header p-2">Header</div>
+            <div class="card-body">
+                <h5 class="card-title">Light card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+            </div>
         </div>
     </div>
 </div>

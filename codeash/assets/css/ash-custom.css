@@ -1,6 +1,24 @@
 body {
     min-width: 480px;
+    height: 100%;
 }
+
+.contact-sec {
+    margin-top: -80px;
+}
+
+.section-body {
+    padding-bottom: 0;
+}
+
+.workex {
+    background-image: linear-gradient(rgb(248, 249, 252), rgb(214, 215, 216));
+}
+
+.techstack {
+    background-image: linear-gradient(rgb(248, 252, 252), rgb(234, 237, 240));
+}
+
 .input-group .form-control {
     background: transparent;
     /* background-color: rgba(255, 255, 255, 0.527) !important; */
@@ -123,4 +141,77 @@ textarea:focus {
     align-self: middle;
     line-height: 80px;
     font-size: 24px;
+}
+
+
+/* Education Card Animation */
+
+.edu .row {
+    overflow: hidden;
+    padding: 10px;
+    /* margin: -10px; */
+}
+
+.edu .card {
+    height: 50px;
+    text-decoration: none;
+    place-content: center;
+    padding: 1em;
+    -moz-transition: -moz-transform .15s linear;
+    -o-transition: -o-transform .15s linear;
+    -webkit-transition: -webkit-transform .15s linear;
+    transition: .15s linear
+}
+
+.card1 {
+    -webkit-transform: rotate(-6deg);
+    -o-transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
+    transform: rotate(-6deg);
+    margin-left: 20px;
+}
+
+.card2 {
+    -o-transform: rotate(4deg);
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    transform: rotate(4deg);
+    position: relative;
+    top: 5px;
+}
+
+.card3 {
+    -o-transform: rotate(-3deg);
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+    position: relative;
+    top: -5px;
+}
+
+.card4 {
+    -o-transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    transform: rotate(5deg);
+    position: relative;
+    top: -10px;
+}
+
+.edu .card:hover,
+.edu .card:focus {
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    transform: scale(1.25);
+    position: relative;
+    height: 200px;
+
+    z-index: 1;
+    margin-top: 20px;
+    ba
+}
+
+.after-edu {
+    height: 150px;
 }
