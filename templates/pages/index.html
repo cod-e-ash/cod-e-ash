@@ -1,536 +1,99 @@
 {% extends '_base.html' %}
 {% load static %}
 {% block content %}
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent" id="mynavbar" color-on-scroll="600">
-  <div class="container">
-    <div class="dropdown button-dropdown" data-toggle="none">
-      <div>
-        <span class="button-bar"></span>
-        <span class="button-bar"></span>
-        <span class="button-bar"></span>
+
+<!-- NAVBAR -->
+{% include "pages/_nav.html" %}
+
+<!-- BODY START -->
+<div class="wrapper">
+    <div class="page-header clear-filter" filter-color="orange">
+      <div class="page-header-image" data-parallax="true" style="background-image:url('static/img/bg1.jpg');">
+      </div>
+      <div class="container">
+        <div class="photo-container mt-2">
+          <img src="static/img/ashish_profile.jpg" alt="">
+        </div>
+        <h3 class="title">Ashish Bagaddeo</h3>
+        <p class="category font-weight-normal mb-2"> Eat ~ Code ~ Party ~ Sleep </p>
+        <div class="content mt-5">
+          <div class="social-description">
+            <h2>9 years</h2>
+            <p>Experience</p>
+          </div>
+          <div class="social-description">
+            <h2>32</h2>
+            <p>Age</p>
+          </div>
+          <div class="social-description">
+            <h2>London</h2>
+            <p>Location</p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="navbar-translate">
-      <a class="" href="#" rel="tooltip" title="developed by Ashish" data-placement="bottom" target="_self">
-        Cod-e-asH
-      </a>
-      <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
-        aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-bar top-bar"></span>
-        <span class="navbar-toggler-bar middle-bar"></span>
-        <span class="navbar-toggler-bar bottom-bar"></span>
-      </button>
-    </div>
-    <div class="collapse navbar-collapse justify-content-end" id="navigation">
-      <ul class="navbar-nav">
-        <li class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" data-toggle="dropdown">
-            <!-- <i class="now-ui-icons design_app"></i> -->
-            <i class="now-ui-icons education_glasses"></i>
-            <p>About</p>
+    <div class="section section-body">
+      <div class="container">
+        <div class="button-container mb-2">
+          <a href="https://www.linkedin.com/in/ashish-bagaddeo-48425278/" class="btn btn-primary btn-round btn-lg btn-icon"
+            rel="tooltip" title="Check put my profile on LinkedIn">
+            <i class="fab fa-linkedin"></i>
           </a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink1">
-            <a class="dropdown-item" href="#aboutme">
-              <i class="now-ui-icons sport_user-run"></i> Me, Myself
-            </a>
-            <a class="dropdown-item" href="#education">
-              <i class="now-ui-icons education_hat"></i> Education
-            </a>
-            <a class="dropdown-item" href="#techstack">
-              <i class="now-ui-icons design_palette"></i> Tech Stack
-            </a>
-            <a class="dropdown-item" href="#workex">
-              <i class="now-ui-icons business_badge"></i> Work Experience
-            </a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact Me</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% static '/files/Ashish.Bagaddeo.Profile.doc' %}">Resume</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" rel="tooltip" title="Like me on Facebook" data-placement="bottom" href="https://www.facebook.com/crashish"
-            target="_blank">
-            <i class="fab fa-facebook-square"></i>
-            <p class="d-lg-none d-xl-none">Facebook</p>
+          <a href="https://facebook.com/crashish" class="btn btn-info btn-round btn-lg btn-icon" rel="tooltip" title="Like me on Facebook">
+            <i class="fab fa-facebook"></i>
           </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" rel="tooltip" title="Check out Github repo" data-placement="bottom" href="https://github.com/cod-e-ash"
-            target="_blank">
+          <a href="https://github.com/cod-e-ash" class="btn btn-danger btn-round btn-lg btn-icon" rel="tooltip" title="Checkout my Github repo">
             <i class="fab fa-github"></i>
-            <p class="d-lg-none d-xl-none">Github</p>
+          </a>
+        </div>
+
+        <!-- ABOUT ME -->
+        {% include "pages/_aboutme.html" %}
+
+        <!-- EDUCATION -->
+        {% include "pages/_education.html" %}
+
+        <!-- TECHSTACK -->
+        {% include "pages/_techstack.html" %}
+
+        <!-- WORK EX -->
+        {% include "pages/_workex.html" %}
+
+        <!-- PORTFOLIO -->
+        {% include "pages/_portfolio.html" %}
+
+        </div>
+    </div>
+    
+    <!-- CONTACT ME -->
+    {% include "pages/_contactme.html" %}
+</div>
+
+<footer class="footer footer-default">
+  <div class="container">
+    <nav>
+      <ul>
+        <li>
+          <a href="{% static '/files/Ashish.Bagaddeo.Profile.doc' %}">
+            Resume
+          </a>
+        </li>
+        <li>
+          <a class="text-lowercase" href="mailto: ashish@bagaddeo.com">
+            ashish@bagaddeo.com
           </a>
         </li>
       </ul>
+    </nav>
+    <div class="copyright" id="copyright">
+      &copy;
+      <script>
+        document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+      </script>, Components by
+      <a href="https://www.creative-tim.com" target="_blank"></a>Creative Tim</a>. | Designed & Developed by
+      <a href="mailto: ashish@bagaddeo.com">Ashish Bagaddeo</a>.
     </div>
   </div>
-</nav>
-<!-- End Navbar -->
-<div class="wrapper">
-  <div class="page-header clear-filter" filter-color="orange">
-    <div class="page-header-image" data-parallax="true" style="background-image:url('static/img/bg1.jpg');">
-    </div>
-    <div class="container">
-      <div class="photo-container mt-2">
-        <img src="static/img/ashish_profile.jpg" alt="">
-      </div>
-      <h3 class="title">Ashish Bagaddeo</h3>
-      <p class="category font-weight-normal mb-2"> Eat ~ Code ~ Party ~ Sleep </p>
-      <div class="content mt-5">
-        <div class="social-description">
-          <h2>9 years</h2>
-          <p>Experience</p>
-        </div>
-        <div class="social-description">
-          <h2>32</h2>
-          <p>Age</p>
-        </div>
-        <div class="social-description">
-          <h2>London</h2>
-          <p>Location</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="section section-body">
-    <div class="container">
-      <div class="button-container mb-2">
-        <a href="https://www.linkedin.com/in/ashish-bagaddeo-48425278/" class="btn btn-primary btn-round btn-lg btn-icon"
-          rel="tooltip" title="Check put my profile on LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://facebook.com/crashish" class="btn btn-info btn-round btn-lg btn-icon" rel="tooltip" title="Like me on Facebook">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://github.com/cod-e-ash" class="btn btn-danger btn-round btn-lg btn-icon" rel="tooltip" title="Checkout my Github repo">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-      <div class="p-1" id="aboutme"></div>
-      <div class="container p-5 mt-5">
-        <h3 class="title"><i class="now-ui-icons business_badge"></i> About me</h3>
-        <h5 class="description text-dark">I am Ashish Bagaddeo. With over 9 years of experience in developing and
-          maintiaining large scale softwares, this is my first foray into web development. I am a self-taught backend
-          developer with focus on Node.js and
-          Django. Currently residing in London, i like to travel and in love with nature. With that, I pursue my other
-          passion
-          i.e. Photography.</h5>
-        <div class="tab-pane" id="messages" role="tabpanel">
-          <div class="col-md-10 ml-auto mr-auto">
-            <div class="row collections">
-              <div class="col-md-6">
-                <img src="static/img/ashish_2.jpg" alt="" class="img-raised">
-              </div>
-              <div class="col-md-6">
-                <img src="static/img/ashish_1.jpg" alt="" class="img-raised">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="p-2 mt-2" id="education"></div>
-      <div class="container edu p-1 mt-5">
-        <h3 class="title"><i class="now-ui-icons education_hat"></i> Academy </h3>
-        <div class="row">
-          <div class="card card1 border-light ml-auto mr-auto" style="max-width: 20rem;">
-            <div class="card-header p-2">High School Certification (SSC)</div>
-            <div class="card-body">
-              <h5 class="card-title">Pune Board, India</h5>
-              <p class="h6"> ~ Year : 2002</p>
-              <p class="h6"> ~ Score : 67% </p>
-              <p class="h6"> ~ Class : First </p>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="card card2 border-light ml-auto mr-auto" style="max-width: 18rem;">
-            <div class="card-header p-2">Jr. College (HSC)</div>
-            <div class="card-body">
-              <h5 class="card-title">Pune Board, India</h5>
-              <p class="h6"> ~ Year : 2004</p>
-              <p class="h6"> ~ Score : 69% </p>
-              <p class="h6"> ~ Class : First </p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="card card3 border-light ml-auto mr-auto" style="max-width: 18rem;">
-            <div class="card-header p-2">Bachaelor of Science in IT (Bsc IT)</div>
-            <div class="card-body">
-              <h5 class="card-title">Mumbai Univarsity, India</h5>
-              <p class="h6"> ~ Year : 2008</p>
-              <p class="h6"> ~ Score : 71% </p>
-              <p class="h6"> ~ Class : First </p>
-            </div>
-          </div>
-        </div>
-        <div class="row mb-3">
-          <div class="card card4 border-light ml-auto mr-auto" style="max-width: 22rem;">
-            <div class="card-header p-2">MS Software Engineering</div>
-            <div class="card-body">
-              <h5 class="card-title">BITS Pilani, India</h5>
-              <p class="h6"> ~ Year : 2012</p>
-              <p class="h6"> ~ CGPA : 6.5 </p>
-              <p class="h6"> ~ Class : First </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="after-edu p-4" id="techstack"></div>
-      <div class="container techstack shadow rounded mt-2">
-        <div class="title skill-header">
-          <h3 class="h3 font-weight-bold" style="margin: -12px">
-            <a class="skill-arrow">
-              <i class="fa fa-link"></i>
-            </a>
-            <span>Tech Stack</span>
-          </h3>
-          <hr class="shadow bg-white rounded">
-        </div>
-        <div class="row justify-content-end border-bottom">
-          <div class="col-md-6 mb-5">
-            <h4>Web Technologies</h4>
-            <div class="progress-container progress-success">
-              <span class="progress-badge">Python</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                  aria-valuemax="100" style="width: 40%;">
-                  <span class="progress-value">4 months</span>
-                </div>
-              </div>
-            </div>
-            <br>
-            <div class="progress-container progress-orchid">
-              <span class="progress-badge">Django</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-warning progress-orchid" role="progressbar" aria-valuenow="60"
-                  aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
-                  <span class="progress-value">2 months</span>
-                </div>
-              </div>
-            </div>
-            <br>
-            <div class="progress-container progress-danger">
-              <span class="progress-badge">Javascript</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-secondary" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                  aria-valuemax="100" style="width: 30%;">
-                  <span class="progress-value">3 months</span>
-                </div>
-              </div>
-            </div>
-            <br>
-            <div class="progress-container progress-info">
-              <span class="progress-badge">Node.js</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                  aria-valuemax="100" style="width: 30%;">
-                  <span class="progress-value">3 months</span>
-                </div>
-              </div>
-            </div>
-            <br>
-            <div class="progress-container progress-pinka">
-              <span class="progress-badge">Angular</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                  aria-valuemax="100" style="width: 40%;">
-                  <span class="progress-value">4 months</span>
-                </div>
-              </div>
-            </div>
-            <br>
-          </div>
-        </div>
-        <div class="skill-cover">
-          <a class="skill-arrow">
-            <i class="fa fa-location-arrow"></i>
-          </a>
-        </div>
-        <div class="row mb-5 justify-content-left">
-          <div class="col-md-6">
-            <h4>iSeries</h4>
-            <div class="progress-container progress-success">
-              <span class="progress-badge">RPGLE</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                  aria-valuemax="100" style="width: 90%;">
-                  <span class="progress-value">9 years</span>
-                </div>
-              </div>
-            </div>
-            <br>
-            <div class="progress-container progress-info">
-              <span class="progress-badge">CLLE</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-secondary" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                  aria-valuemax="100" style="width: 90%;">
-                  <span class="progress-value">9 years</span>
-                </div>
-              </div>
-            </div>
-            <br>
-            <div class="progress-container progress-danger mb-5">
-              <span class="progress-badge">SQL (DB2)</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                  aria-valuemax="100" style="width: 90%;">
-                  <span class="progress-value">9 years</span>
-                </div>
-              </div>
-            </div>
-            <br>
-          </div>
-        </div>
-      </div>
-      <div class="row p-5" id="projects">
-        <div class="col-md-6 ml-auto mr-auto" id="projects">
-          <h3 class="title"><i class="now-ui-icons sport_trophy"></i> Portfolio </h3>
-          <div class="nav-align-center">
-            <ul class="nav nav-pills nav-pills-primary nav-pills-just-icons" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#profile" role="tablist">
-                  <i class="now-ui-icons design_image"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#home" role="tablist">
-                  <i class="now-ui-icons business_briefcase-24"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#messages" role="tablist">
-                  <i class="now-ui-icons sport_user-run"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- Tab panes -->
-        <div class="tab-content gallery">
-          <div class="tab-pane active" id="home" role="tabpanel">
-            <div class="col-md-10 ml-auto mr-auto">
-              <div class="row collections">
-                <div class="col-md-6">
-                  <img src="static/img/bg1.jpg" alt="" class="img-raised">
-                  <img src="static/img/bg3.jpg" alt="" class="img-raised">
-                </div>
-                <div class="col-md-6">
-                  <img src="static/img/bg4.jpg" alt="" class="img-raised">
-                  <img src="static/img/bg6.jpg" alt="" class="img-raised">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane" id="profile" role="tabpanel">
-            <div class="col-md-10 ml-auto mr-auto">
-              <div class="row collections">
-                <div class="col-md-6">
-                  <div class="card">
-                    <div class="card-header">Test</div>
-                    <div class="card-body">Note in test</div>
-                  </div>
-                  <img src="static/img/bg2.jpg" alt="" class="img-raised">
-                </div>
-                <div class="col-md-6">
-                  <img src="static/img/bg6.jpg" alt="" class="img-raised">
-                  <img src="static/img/bg1.jpg" alt="" class="img-raised">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane" id="messages" role="tabpanel">
-            <div class="col-md-10 ml-auto mr-auto">
-              <div class="row collections">
-                <div class="col-md-6">
-                  <img src="static/img/bg3.jpg" alt="" class="img-raised">
-                  <img src="static/img/bg8.jpg" alt="" class="img-raised">
-                </div>
-                <div class="col-md-6">
-                  <img src="static/img/bg7.jpg" alt="" class="img-raised">
-                  <img src="static/img/bg6.jpg" class="img-raised">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="p-4 mb-3" id="workex"></div>
-    <div class="container workex shadow p-1 mb-5 bg-white rounded">
-      <div class="row justify-content-center mb-4">
-        <h3 class="h3 font-weight-bold">
-          <a class="skill-arrow">
-            <i class="fa fa-briefcase"></i>
-          </a>
-          <span>Work Ex</span>
-        </h3>
-        <!-- <h3 class="title" id="about"><span><i class="now-ui-icons clothes_tie-bow text-align-baseline"></i></span> Work Ex</h3> -->
-      </div>
-      <div class="row mb-5">
-        <div class="col-md-12">
-          <div class="main-timeline8">
-            <div class="timeline">
-              <span class="timeline-icon"></span>
-              <span class="year">2017-18</span>
-              <div class="timeline-content">
-                <h6>
-                  <span class="badge badge-success">RPGLE</span>
-                  <span class="badge badge-info">CLLE</span>
-                  <span class="badge badge-danger">SQL (DB2)</span>
-                  <span class="badge badge-orchid">SHELL</span>
-                </h6>
-                <h3 class="title">Senior Developer at Citi</h3>
-                <p class="description font-weight-normal">
-                  In March 2017, a day after my birthday, joined this wonderful organization and team. Got the time to
-                  study <b>Derivative Market</b>, and the product which I was developing for 3 years, from a client
-                  perspective. Worked on
-                  many
-                  projects, as part of maintainance or regulatory requirement or analysis of day-to-day business.
-                </p>
-              </div>
-            </div>
-            <div class="timeline">
-              <span class="timeline-icon"></span>
-              <span class="year">2014-17</span>
-              <div class="timeline-content">
-                <h6>
-                  <span class="badge badge-success">RPGLE</span>
-                  <span class="badge badge-info">CLLE</span>
-                  <span class="badge badge-danger">SQL (DB2)</span>
-                  <span class="badge badge-orchid">SHELL</span>
-                  <span class="badge badge-pinka">VBA</span>
-                </h6>
-                <h3 class="title">Senior Developer at FIS</h3>
-                <p class="description font-weight-normal">
-                  For more than 3 and half years, I, with many my team developed, maintained and enhanced the most used
-                  backend derivative product by evey major company in the world. Sometime it was a regulatory
-                  requirement, a new feature requested by client or need of the hour.
-                </p>
-              </div>
-            </div>
-            <div class="timeline">
-              <span class="timeline-icon"></span>
-              <span class="year">2008-14</span>
-              <div class="timeline-content">
-                <h6>
-                  <span class="badge badge-success">RPGLE</span>
-                  <span class="badge badge-info">CLLE</span>
-                  <span class="badge badge-danger">SQL (DB2)</span>
-                  <span class="badge badge-orchid">SHELL</span>
-                  <span class="badge badge-pinka">VBA</span>
-                </h6>
-                <h3 class="title">Career start at Wipro</h3>
-                <p class="description font-weight-normal">
-                  This is where it began. Just out of the college, recession was having its effect on the job market.
-                  After three rounds of interview, and lots of fever, was selected in this mammoth company. After 6
-                  weeks
-                  of training, was assigned my first client <b>JP Morgan</b>. During my 5 and half years, I built my
-                  base
-                  as a
-                  developer and found it to be my passion as well. Skills developed here are core to my foundation.
-                </p>
-              </div>
-            </div>
-            <div class="timeline">
-              <span class="timeline-icon"></span>
-              <span class="year">2002</span>
-              <div class="timeline-content">
-                <h3 class="title">First Job in Internet Cafe</h3>
-                <p class="description font-weight-normal">
-                  My first high school job (just for curosity) to maintain internet cafe computers.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section section-signup" style="background-image: url('static/img/bg11.jpg'); background-size: cover; background-position: top center; min-height: 700px;">
-      <!-- <div class="section section-contact-us text-center"> -->
-      <div class="container contact-sec">
-        <h2 class="title" id="contact">Contact Me?</h2>
-        <p class="description font-weight-normal">Enter the details below and I will get back to you.</p>
-        <div class="row">
-          <div class="col-lg-4 text-center p-2 ml-auto mr-auto d-inline">
-            <span class="d-inline pr-2">reach me at: </span>
-            <h5 class="h5 text-lowercase font-weight-bold d-inline">ashish@bagaddeo.com</h5>
-          </div>
-          <div class="d-lg-none d-xl-none col-12 text-center p-2 mb-3 ml-auto mr-auto mt-1">
-            <h6 class="h6">OR </h6>
-          </div>
-          <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
-            <div class="input-group input-lg">
-              <div class="input-group-prepend">
-                <span class="input-group-text">
-                  <i class="now-ui-icons users_circle-08"></i>
-                </span>
-              </div>
-              <input type="text" class="form-control" placeholder="Name...">
-            </div>
-            <div class="input-group input-lg">
-              <div class="input-group-prepend">
-                <span class="input-group-text transparent">
-                  <i class="now-ui-icons ui-1_email-85"></i>
-                </span>
-              </div>
-              <input type="text" class="form-control" placeholder="Email...">
-            </div>
-            <div class="input-group input-lg">
-              <div class="input-group-prepend">
-                <span class="input-group-text">
-                  <i class="fa fa-phone"></i>
-                </span>
-              </div>
-              <input type="text" class="form-control" placeholder="Phone no...">
-            </div>
-            <div class="textarea-container">
-              <textarea class="form-control p-2" name="name" rows="4" cols="80" placeholder="Type a message..."></textarea>
-            </div>
-            <div class="send-button">
-              <a href="#pablo" class="btn btn-primary btn-round btn-block btn-lg">Send Message</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <footer class="footer footer-default">
-    <div class="container">
-      <nav>
-        <ul>
-          <li>
-            <a href="{% static '/files/Ashish.Bagaddeo.Profile.doc' %}">
-              Resume
-            </a>
-          </li>
-          <li>
-            <a class="text-lowercase" href="mailto: ashish@bagaddeo.com">
-              ashish@bagaddeo.com
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="copyright" id="copyright">
-        &copy;
-        <script>
-          document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
-        </script>, Components by
-        <a href="https://www.creative-tim.com" target="_blank"></a>Creative Tim</a>. | Designed & Developed by
-        <a href="mailto: ashish@bagaddeo.com">Ashish Bagaddeo</a>.
-      </div>
-    </div>
-  </footer>
+</footer>
 </div>
 {% endblock %}
