@@ -1,0 +1,31 @@
+{% if messages%}
+
+    {% for message in messages%}
+    <div id='message' class="alert alert-{{ message.tags }}" role="alert">
+        <div class="container">
+            {% if message.level == DEFAULT_MESSAGE_LEVELS_ERROR %}
+                <div class="alert-icon">
+                    <i class="now-ui-icons objects_support-17"></i>
+                </div>
+                <strong>Oh snap! </strong> Thats embrassing.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">
+                        <i class="now-ui-icons ui-1_simple-remove"></i>
+                    </span>
+                </button>
+            {% else %}
+                <div class="alert-icon">
+                    <i class="now-ui-icons ui-2_like"></i>
+                </div>
+                <strong>Thank You! </strong> {{ message }}.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">
+                        <i class="now-ui-icons ui-1_simple-remove"></i>
+                    </span>
+                </button>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+
+{% endif %}

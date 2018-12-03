@@ -1,5 +1,4 @@
-<div class="section section-contactme" style="background-image: url('static/img/bg11.jpg'); background-size: cover; background-position: top center; min-height: 700px;">
-    <!-- <div class="section section-contact-us text-center"> -->
+<div id="contact" class="section section-contactme" style="background-image: url('static/img/bg11.jpg'); background-size: cover; background-position: top center; min-height: 700px;">
     <div class="container contact-sec">
         <h2 class="title" id="contact">Contact Me?</h2>
         <p class="description font-weight-normal">Enter the details below and I will get back to you.</p>
@@ -12,36 +11,42 @@
                 <h6 class="h6">OR </h6>
             </div>
             <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
-                <div class="input-group input-lg">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">
-                            <i class="now-ui-icons users_circle-08"></i>
-                        </span>
+                <div style="width:120%">
+                    {% include 'pages/_alert.html' %}
+                </div>
+                <form action="{% url 'contact' %}" method="POST" autocomplete="off">
+                    {% csrf_token %} 
+                    <div class="input-group input-lg">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="now-ui-icons users_circle-08"></i>
+                            </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Name..." name='mytype1' required autocomplete="chromepleasedontcompletethis">
                     </div>
-                    <input type="text" class="form-control" placeholder="Name...">
-                </div>
-                <div class="input-group input-lg">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text transparent">
-                            <i class="now-ui-icons ui-1_email-85"></i>
-                        </span>
+                    <div class="input-group input-lg">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text transparent">
+                                <i class="now-ui-icons ui-1_email-85"></i>
+                            </span>
+                        </div>
+                        <input type="email" class="form-control" placeholder="Email..." name='mytype2' required autocomplete="chromepleasedontcompletethis">
                     </div>
-                    <input type="text" class="form-control" placeholder="Email...">
-                </div>
-                <div class="input-group input-lg">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">
-                            <i class="fa fa-phone"></i>
-                        </span>
+                    <div class="input-group input-lg">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-phone"></i>
+                            </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Phone no..." name='phone' autocomplete="new-how-do-you-do">
                     </div>
-                    <input type="text" class="form-control" placeholder="Phone no...">
-                </div>
-                <div class="textarea-container">
-                    <textarea class="form-control p-2" name="name" rows="4" cols="80" placeholder="Type a message..."></textarea>
-                </div>
-                <div class="send-button">
-                    <a href="#" class="btn btn-primary btn-round btn-block btn-lg">Send Message</a>
-                </div>
+                    <div class="textarea-container">
+                        <textarea class="form-control p-2" name="message" rows="4" cols="80" placeholder="Type a message..."></textarea>
+                    </div>
+                    <div class="send-button">
+                        <button action='submit' class="btn btn-primary btn-round btn-block btn-lg">Send Message</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
