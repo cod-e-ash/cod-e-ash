@@ -1,0 +1,1 @@
+web: gunicorn codeash.wsgi --log-file -
